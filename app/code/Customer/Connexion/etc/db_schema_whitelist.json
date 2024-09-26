@@ -7,10 +7,13 @@
             "created_at": true,
             "updated_at": true
         },
+        "index": {
+            "CUSTOMER_CONNEXION_LOGS_CUSTOMER_ID": true,
+            "CUSTOMER_CONNEXION_LOGS_CREATED_AT": true
+        },
         "constraint": {
             "PRIMARY": true,
-            "CUSTOMER_CONNEXION_LOGS_CUSTOMER_ID_CUSTOMER_ENTITY_ENTITY_ID": true,
-            "CUSTOMER_CONNEXION_LOGS_CUSTOMER_ID": true
+            "CUSTOMER_CONNEXION_LOGS_CUSTOMER_ID_CUSTOMER_ENTITY_ENTITY_ID": true
         }
     }
 }

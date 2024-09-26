@@ -19,8 +19,11 @@
         <constraint xsi:type="foreign" referenceId="CUSTOMER_CONNEXION_LOGS_CUSTOMER_ENTITY_ENTITY_ID"
                     table="customer_connexion_logs" column="customer_id" referenceTable="customer_entity"
                     referenceColumn="entity_id" onDelete="CASCADE"/>
-        <constraint xsi:type="unique" referenceId="CUSTOMER_CONNEXION_LOGS_CUSTOMER_ID">
+        <index referenceId="CUSTOMER_CONNEXION_LOGS_CUSTOMER_ID" indexType="btree">
             <column name="customer_id"/>
-        </constraint>
+        </index>
+        <index referenceId="CUSTOMER_CONNEXION_LOGS_CREATED_AT" indexType="btree">
+            <column name="created_at"/>
+        </index>
     </table>
 </schema>

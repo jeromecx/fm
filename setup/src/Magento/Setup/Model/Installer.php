@@ -522,7 +522,7 @@ class Installer
     }
 
     /**
-     * Logs progress
+     * Log progress
      *
      * @return void
      */

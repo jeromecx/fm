@@ -1,35 +1,22 @@
-<?php declare(strict_types=1);
+<?php
 
 namespace Customer\Connexion\Api\Data;
 
-use Magento\Framework\Api\ExtensibleDataInterface;
-
-interface LogsInterface extends ExtensibleDataInterface
+/**
+ * Connexion Log interface for API handling
+ * @api
+ */
+interface LogInterface
 {
-    /**
-     * The unique ID for a "Connexion log" object.
+    /**#@+
+     * Constants defined for keys of the data array. Identical to the name of the getter in snake case
      */
     public const string CONNEXION_ID = 'connexion_id';
-
-    /**
-     * The customer ID
-     */
     public const string CUSTOMER_ID = 'customer_id';
-
-    /**
-     * The IP address of customer
-     */
     public const string IP = 'ip';
-
-    /**
-     * Created at timestamp
-     */
     public const string CREATED_AT = 'created_at';
-
-    /**
-     * Updated at timestamp
-     */
     public const string UPDATED_AT = 'updated_at';
+    /**#@-*/
 
     /**
      * Get connexion log id
@@ -44,7 +31,7 @@ interface LogsInterface extends ExtensibleDataInterface
      * @param int $id
      * @return $this
      */
-    public function setConnexionId(int $id);
+    public function setConnexionId($id);
 
     /**
      * Gets the customer ID for the connexion log.
