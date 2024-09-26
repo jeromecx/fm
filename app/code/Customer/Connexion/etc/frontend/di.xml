@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- A plugin that executes when a customer uses the LoginPost controller from the Luma frontend -->
+    <type name="Magento\Customer\Controller\Account\LoginPost">
+        <plugin name="training-customer-loginpost-plugin"
+                type="Customer\Connexion\Plugin\CustomerLoginPostPlugin" sortOrder="20"/>
+    </type>
+</config>
